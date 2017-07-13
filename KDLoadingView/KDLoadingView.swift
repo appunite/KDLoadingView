@@ -86,7 +86,6 @@ import UIKit
         
         shapeLayer.path = bezierPath.cgPath
         shapeLayer.frame = self.bounds
-        isHidden = hidesWhenStopped
         
         self.layer.addSublayer(shapeLayer)
     }
