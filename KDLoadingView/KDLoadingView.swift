@@ -74,6 +74,9 @@ import UIKit
         shapeLayer.strokeEnd = 1
         shapeLayer.lineWidth = lineWidth
         isHidden = true
+        
+        //
+        self.layer.addSublayer(shapeLayer)
     }
     
     public override func layoutSubviews() {
@@ -86,8 +89,6 @@ import UIKit
         
         shapeLayer.path = bezierPath.cgPath
         shapeLayer.frame = self.bounds
-        
-        self.layer.addSublayer(shapeLayer)
     }
     
     fileprivate func animateStrokeEnd() -> CABasicAnimation {
